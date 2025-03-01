@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0" version="26.0.16">
+  <diagram name="Page-1" id="pm188JC2vOzqoDeCaq2v">
+    <mxGraphModel dx="903" dy="948" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="353" y="77" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-15" value="/user/password&lt;div&gt;PUT&lt;/div&gt;" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="206.45458984375" y="179.27273559570312" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-1" value="USER" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334.5" y="10.5" width="37" height="11" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-12" value="/candidates" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-4" target="J5_WIaJrGhXVzVpqqNMV-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-13" value="/candiates/count&amp;nbsp; &amp;nbsp; GET" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="535.9091186523438" y="-197.4545440673828" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-4" value="/SIGNUP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="293" y="-97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-5" value="POST" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-4" target="J5_WIaJrGhXVzVpqqNMV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="21" as="sourcePoint" />
+            <mxPoint x="275" y="-1" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-6" value="signin/login" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="136" y="-14" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-7" value="/post" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-6" target="J5_WIaJrGhXVzVpqqNMV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="21" as="sourcePoint" />
+            <mxPoint x="320" y="-29" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-9" value="/vote/id&amp;nbsp; &amp;nbsp; PUT" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="357" y="69" as="sourcePoint" />
+            <mxPoint x="578" y="71" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-10" value="vote to candidate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="41" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-11" value="list of candidates" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="-114" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-14" value="get the live count desc order" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="537" y="-233" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-16" value="update the password" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="146" y="178" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-20" value="/PUT&amp;nbsp; &amp;nbsp; &amp;nbsp;/admin/candidateId" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="885.727294921875" y="110.90911865234375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-22" value="DELETE&lt;div&gt;/admin/candidateId&lt;/div&gt;" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="607.1817626953125" y="238.18182373046875" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-17" value="ADMIN" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="895" y="-72" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-18" value="INSERT" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="836" y="-233" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-19" value="/POST&amp;nbsp; &amp;nbsp; /admin" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-17" target="J5_WIaJrGhXVzVpqqNMV-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="896" y="-181" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-21" value="UPDATE&amp;nbsp;&lt;div&gt;details of candidate&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="822" y="112" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-23" value="DELETE A CANDIDATE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="546" y="238" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J5_WIaJrGhXVzVpqqNMV-24" value="ROLE=ADMIN" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.02;entryY=0.85;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="J5_WIaJrGhXVzVpqqNMV-4" target="J5_WIaJrGhXVzVpqqNMV-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

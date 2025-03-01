@@ -1,0 +1,45 @@
+ voting application
+
+voter and candidate
+
+voter-> the individual who caste vote to candidates
+
+candidate->  less in number and are elected by the voters /users
+
+
+Models ->  Routes
+
+1. user signin and user signup 
+2. list of candidates 
+3. one person one vote
+4.  endpoint for the total number of live votes to candidates in descending order
+5. userModel should have adhaar unique identification
+6. list of candidates controlled by admin and he/she cannot caste vote
+7. users can cahnge the password 
+
+-------------------------------------------------
+
+routes 
+
+1.  user authentication
+ /signup POST- CREATE USERS ACCOUNT
+ /login  POST-  LOGINTO EXSISTING ACCOUNT USING ADHAAR CARD AND password
+
+
+ 2. voting
+ /candidate  GET- get list of candidates
+ /vote/:candidate PUT - vote for a specific candidate
+
+ 3. vote counts
+ /vote/counts GET- get the list of total votes to all the candidateindividually descending order
+
+ 4. user profile
+ /profile POST - create a new user 
+ /profile/password PUT-- change the users password
+
+ 5. admin role
+  /candidate: POST -  add a new candidate 
+  /candidate/:candidateId PUT - UPDATE THE VALUES IN candidate
+  /candidate/:candidateId  DELETE- delete the  candidate  
+
+
