@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 
-const candidateSchema= new mongoose.Mongoose.Schema({
+const candidateSchema= new mongoose.Schema({
     name:{
         type:String,
         required:true

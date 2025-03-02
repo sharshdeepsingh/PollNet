@@ -1,7 +1,7 @@
 const express=require('express');
-
-
 const app=express();
+const db=require('./db');
+require('dotenv').config();
 
 const bodyPareser=require('body-parser');
 
@@ -15,9 +15,11 @@ app.get('/',(req,res)=>{
 })
 
 const userRoutes= require('./Routes/userRoutes')
-
 app.use('/user',userRoutes);
 
+
+const candidateRoutes= require('./Routes/candidateRoutes')
+app.use('/candidate',candidateRoutes);
 
 
 app.listen(PORT,()=>{
