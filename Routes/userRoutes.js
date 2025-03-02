@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../Models/userSchema");
 const { generateToken, jwtAuthMiddleware } = require("../jwt");
+const Candidate=require('../Models/candidateSchema')
 
 // signup
 router.post("/signup", async (req, res) => {
@@ -31,19 +32,20 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { adhaarCardNumber, password } = req.body;
-    const user = await User.findOne({ adhaarCardNumber: adhaarCardNumber });
+    const user = await User.findOne({ adhaarCardNumber });
     if (!user || !(await user.comparePassword(password))) {
-      res.status(400).json({ error: "Username or Password is wrong" });
+      return res.status(400).json({ error: "Username or Password is wrong" }); // Added return
     }
-    const payload = {
-      id: user.id,
-    };
+
+    const payload = { id: user.id };
     const token = generateToken(payload);
     res.json({ token });
   } catch (err) {
-    res.status(500).json({ error: "Internal Server Error " });
+    console.error("Login Error:", err);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
 
 // user sees his porfile
 router.get("/profile", jwtAuthMiddleware, async (req, res) => {
@@ -67,35 +69,41 @@ router.get("/profile", jwtAuthMiddleware, async (req, res) => {
   
 //change the password
 router.put('/profile/password', jwtAuthMiddleware, async (req, res) => {
-    try {
-        const userId = req.params.id; // Extract the id from the token
-        const { currentPassword, newPassword } = req.body; // Extract current and new password from request body
-        const user = await User.findById(userId);
+  try {
+      const userId = req.user.id; // Corrected this
+      const { currentPassword, newPassword } = req.body;
 
-        if (!user || !(await user.comparePassword(currentPassword))) {
-            return res.status(401).json({ error: 'Invalid username or password' });
-        }
+      const user = await User.findById(userId);
+      if (!user || !(await user.comparePassword(currentPassword))) {
+          return res.status(401).json({ error: 'Invalid username or password' });
+      }
 
-        user.password = newPassword;
-        await user.save();
-        console.log('Password has been updated');
-
-        res.status(200).json({ message: 'Password updated successfully' }); // Add response
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-}); 
+      user.password = newPassword; // But it should be hashed before saving!
+      await user.save();
+      res.status(200).json({ message: 'Password updated successfully' });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 // list of candidates
-router.get("/candidatesCount", (req, res) => {});
+router.get("/candidates", async (req, res) => {
+  try {
+    const candidates = await Candidate.find();
 
-// vot for the candidate
-router.put("/vote/:candidateId", (req, res) => {});
+    if (!candidates || candidates.length === 0) {
+      return res.status(404).json({ message: "No candidates found" });
+    }
 
-// user change password
-router.put("/user/id", (req, res) => {});
+    res.status(200).json({ candidates });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 
 
 module.exports=router;
