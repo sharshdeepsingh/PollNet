@@ -14,6 +14,9 @@ app.get('/',(req,res)=>{
     res.send('Hi chlo shuru kro ')
 })
 
+const userRoutes= require('./Routes/userRoutes')
+
+app.use('/user',userRoutes);
 
 
 
